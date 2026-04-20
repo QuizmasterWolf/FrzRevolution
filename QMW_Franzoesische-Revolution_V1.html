@@ -114,7 +114,7 @@ h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 4px; text-align: center
     </div>
   </div>
   <button class="play-btn" onclick="startQuiz()">&#9654; Starten</button>
-  <a href="index.html" class="portal-link-start">&#8592; Zur\u00fcck zum Portal</a>
+  <a href="index.html" class="portal-link-start">&#8592; Zurück zum Portal</a>
 </div>
 
 <div id="quizWrap" style="display:none; width:100%; max-width:580px;">
@@ -132,7 +132,7 @@ h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 4px; text-align: center
       <div class="btn-group" id="btnGroup"></div>
       <div class="feedback" id="feedback"></div>
       <div class="btn-row">
-        <button class="back-btn" id="backBtn" onclick="goBack()">&#8592; Zur\u00fcck</button>
+        <button class="back-btn" id="backBtn" onclick="goBack()">&#8592; Zurück</button>
         <button class="next-btn" id="nextBtn" onclick="nextQuestion()">N\u00e4chste Frage &#8594;</button>
       </div>
     </div>
@@ -141,7 +141,7 @@ h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 4px; text-align: center
       <div class="result-title" id="resultTitle"></div>
       <div class="result-score" id="resultScore"></div>
       <button class="restart-btn" onclick="restart()">&#8629; Nochmal</button>
-      <a href="index.html" class="portal-link">&#8592; Zur\u00fcck zum Portal</a>
+      <a href="index.html" class="portal-link">&#8592; Zurück zum Portal</a>
     </div>
   </div>
 </div>
@@ -209,7 +209,7 @@ var questions = [
   },
   {
     text: "Der Nationalkonvent stimmte 1792 für die Abschaffung der Monarchie und rief die ______ aus.",
-    options: ["Erste Republik", "Zweite Republik", "Dritte Republik", "Erste Republik", "Konstitutionelle Monarchie"],
+    options: ["Erste Republik", "Zweite Republik", "Dritte Republik", "Vierte Republik", "Konstitutionelle Monarchie"],
     answer: 3,
     explanation: "Im September 1792 wurde die Erste Französische Republik ausgerufen."
   },
@@ -243,7 +243,7 @@ function renderQuestion() {
   document.getElementById('feedback').className = 'feedback';
   document.getElementById('feedback').textContent = '';
   document.getElementById('nextBtn').textContent = current + 1 < questions.length ? 'N\u00e4chste Frage \u2192' : 'Ergebnis anzeigen \u2192';
-  document.getElementById('backBtn').textContent = current === 0 ? '\u2190 Start' : '\u2190 Zur\u00fcck';
+  document.getElementById('backBtn').textContent = current === 0 ? '\u2190 Start' : '\u2190 Zurück';
   document.getElementById('pauseBtn').textContent = 'Pause';
   paused = false;
 
